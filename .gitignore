@@ -8,4 +8,4 @@
 *__pycache__/
 
 #Project
-.data/MNIST
+data/MNIST/
