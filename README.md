@@ -4,7 +4,7 @@ A modular PyTorch implementation of a feedforward neural network classifier with
 
 ## Overview
 
-This project provides a flexible framework for building and training neural networks with customizable hidden layers, dropout regularization, and comprehensive training metrics. The implementation includes a complete example for MNIST digit classification but can be easily adapted for other tasks. Future iterations will expand to include examples for additional datasets and use cases, as well as a wider variety of evaluation metrics.
+This project provides a flexible framework for building and training neural networks with customizable hidden layers, dropout regularization, and comprehensive training metrics. The implementation includes a complete example for MNIST digit classification but can be easily adapted for other tasks. Future iterations will expand to include examples for additional datasets and use cases, as well as a wider variety of evaluation metrics and GPU support.
 
 ## Key Features
 * Configurable Architecture: Easily define hidden layers with custom sizes and dropout rates
