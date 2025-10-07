@@ -6,17 +6,18 @@ import torch
 
 class MnistData:
     
-    def __init__(self):
+    def __init__(self, batch_size: int):
         transform = transforms.ToTensor()
         self.train_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
         self.test_data = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+        self._batch_size = batch_size
 
     def get_dataloaders(self) -> Tuple[DataLoader, DataLoader]:
         flat_train_data = self._flatten_dataset(self.train_data)
         flat_test_data = self._flatten_dataset(self.test_data)
 
-        train_loader = DataLoader(flat_train_data, batch_size=32, shuffle=True)
-        test_loader = DataLoader(flat_test_data, batch_size=32, shuffle=False)
+        train_loader = DataLoader(flat_train_data, batch_size=self._batch_size, shuffle=True)
+        test_loader = DataLoader(flat_test_data, batch_size=self._batch_size, shuffle=False)
         
         return train_loader, test_loader
     
