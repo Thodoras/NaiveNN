@@ -6,3 +6,6 @@
 *.user
 *.suo
 *__pycache__/
+
+#Project
+.data/MNIST
